@@ -1,4 +1,4 @@
-package com.antoniano.tirociniolite.controllers;
+    package com.antoniano.tirociniolite.controllers;
 
 import com.antoniano.tirociniolite.factories.ARScannerFactory;
 import com.antoniano.tirociniolite.interfaces.ARScanner;

@@ -5,11 +5,48 @@
     android:layout_height="match_parent"
     tools:context=".views.MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/text_view_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="50dp"
+        android:text="Ciao Alessandro!"
+        android:textColor="@color/venice_blue"
+        android:textSize="44sp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Apri scanner" />
+        android:src="@drawable/image" />
+
+    <TextView
+        android:id="@+id/text_view_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="45sp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Fondazione Istituto Antoniano"
+        android:textColor="@color/venice_blue"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_below="@+id/text_view_info"
+        android:layout_marginTop="45sp"
+        android:backgroundTint="@color/venice_blue"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Scanner"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>
