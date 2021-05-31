@@ -1,4 +1,8 @@
-    package com.antoniano.tirociniolite.controllers;
+package com.antoniano.tirociniolite.controllers;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.widget.Toast;
 
 import com.antoniano.tirociniolite.factories.ARScannerFactory;
 import com.antoniano.tirociniolite.interfaces.ARScanner;
@@ -13,6 +17,8 @@ public class MainActivityController {
 
     public MainActivityController(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
+        /*SharedPreferences sharedPreferences = mainActivity.getSharedPreferences("SharedPrefs", Context.MODE_PRIVATE);
+        saveData(sharedPreferences);*/
     }
 
     public void setListeners() {
@@ -21,6 +27,19 @@ public class MainActivityController {
             String technology = ConfigFileReader.getProperty("ar_scanner_technology", view.getContext());
             arScanner = arScannerFactory.getARScanner(technology);
             arScanner.scan(view.getContext());
+            //retrieveData();
         });
+    }
+
+    private void saveData(SharedPreferences sharedPreferences) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("STRING_KEY", "CIAOOOO");
+        editor.apply();
+    }
+
+    private void retrieveData() {
+        SharedPreferences sharedPreferences = mainActivity.getSharedPreferences("SharedPrefs", Context.MODE_PRIVATE);
+        String savedString = sharedPreferences.getString("STRING_KEY", null);
+        Toast.makeText(mainActivity, savedString, Toast.LENGTH_SHORT).show();
     }
 }
