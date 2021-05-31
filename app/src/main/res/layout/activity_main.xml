@@ -12,10 +12,9 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppins_bold"
         android:padding="50dp"
-        android:text="Ciao Alessandro!"
+        android:text="@string/ciao_alessandro"
         android:textColor="@color/venice_blue"
-        android:textSize="44sp"
-        tools:ignore="HardcodedText" />
+        android:textSize="44sp" />
 
     <ImageView
         android:id="@+id/image_view"
@@ -32,10 +31,9 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="45sp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Fondazione Istituto Antoniano"
+        android:text="@string/fondazione_istituto_antoniano"
         android:textColor="@color/venice_blue"
-        android:textSize="18sp"
-        tools:ignore="HardcodedText" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/button"
@@ -46,7 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="@font/poppins_medium"
-        android:text="Scanner"
-        tools:ignore="HardcodedText" />
+        android:text="@string/scanner" />
 
 </RelativeLayout>
