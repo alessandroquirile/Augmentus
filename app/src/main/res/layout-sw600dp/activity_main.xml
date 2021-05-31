@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="50dp"
+        android:text="@string/ciao_alessandro"
+        android:textColor="@color/venice_blue"
+        android:textSize="100sp" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="750sp"
+        android:layout_height="650sp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/homepage_image"
+        android:src="@drawable/image" />
+
+    <TextView
+        android:id="@+id/text_view_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/fondazione_istituto_antoniano"
+        android:textColor="@color/venice_blue"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="700sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_info"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/venice_blue"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/open_scanner"
+        android:textSize="50sp" />
+
+</RelativeLayout>
