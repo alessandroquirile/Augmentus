@@ -22,7 +22,7 @@ public class MainActivityController {
     }
 
     public void setListeners() {
-        mainActivity.getButton().setOnClickListener(view -> {
+        mainActivity.getButtonScan().setOnClickListener(view -> {
             arScannerFactory = ARScannerFactory.getInstance();
             String technology = ConfigFileReader.getProperty("ar_scanner_technology", view.getContext());
             arScanner = arScannerFactory.getARScanner(technology);

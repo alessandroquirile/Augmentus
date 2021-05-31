@@ -10,7 +10,7 @@ import com.antoniano.tirociniolite.controllers.MainActivityController;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
+    private Button buttonScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initViewComponents() {
-        button = findViewById(R.id.button);
+        buttonScan = findViewById(R.id.button);
     }
 
     public void initController() {
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mainActivityController.setListeners();
     }
 
-    public Button getButton() {
-        return button;
+    public Button getButtonScan() {
+        return buttonScan;
     }
 }
