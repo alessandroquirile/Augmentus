@@ -2,6 +2,6 @@
     <string name="app_name">Tirocinio Lite</string>
     <string name="fondazione_istituto_antoniano">Fondazione Istituto Antoniano</string>
     <string name="open_scanner">Apri scanner</string>
-    <string name="ciao_alessandro">Ciao Alessandro!</string>
     <string name="homepage_image">Homepage image</string>
+    <string name="ciao_bentornato">Ciao, bentornato!</string>
 </resources>

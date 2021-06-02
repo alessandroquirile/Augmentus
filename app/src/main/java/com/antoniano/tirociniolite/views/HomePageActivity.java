@@ -6,16 +6,16 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.antoniano.tirociniolite.R;
-import com.antoniano.tirociniolite.controllers.MainActivityController;
+import com.antoniano.tirociniolite.controllers.HomePageActivityController;
 
-public class MainActivity extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity {
 
     private Button buttonScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home_page);
 
         initViewComponents();
         initController();
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initController() {
-        MainActivityController mainActivityController = new MainActivityController(this);
-        mainActivityController.setListeners();
+        HomePageActivityController homePageActivityController = new HomePageActivityController(this);
+        homePageActivityController.setListeners();
     }
 
     public Button getButtonScan() {
