@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
-        android:text="Benvenuto nella tua app di realtà aumentata!"
+        android:text="@string/welcome_title"
         android:textColor="@color/venice_blue"
         android:textSize="35sp" />
 
@@ -33,7 +33,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
-        android:text="Scannerizza le carte e tuffati in un magico mondo virtuale"
+        android:text="@string/welcome_description"
         android:textColor="@color/venice_blue"
         android:textSize="20sp" />
 
@@ -44,6 +44,6 @@
         android:layout_marginTop="45sp"
         android:backgroundTint="@color/venice_blue"
         android:fontFamily="@font/poppins_medium"
-        android:text="Iniziamo" />
+        android:text="@string/iniziamo" />
 
 </LinearLayout>
