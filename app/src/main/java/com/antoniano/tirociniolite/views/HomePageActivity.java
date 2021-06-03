@@ -22,7 +22,7 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     public void initViewComponents() {
-        buttonScan = findViewById(R.id.button);
+        buttonScan = findViewById(R.id.button_scan);
     }
 
     public void initController() {

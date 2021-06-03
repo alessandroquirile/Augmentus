@@ -23,7 +23,7 @@
         <activity
             android:name=".views.WelcomePageActivity"
             android:noHistory="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".views.HomePageActivity"
             android:screenOrientation="portrait" />
