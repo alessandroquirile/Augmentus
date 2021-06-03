@@ -2,6 +2,7 @@ package com.antoniano.tirociniolite.views;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +12,7 @@ import com.antoniano.tirociniolite.controllers.HomePageActivityController;
 public class HomePageActivity extends AppCompatActivity {
 
     private Button buttonScan;
+    private TextView textViewFondazione;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class HomePageActivity extends AppCompatActivity {
 
     public void initViewComponents() {
         buttonScan = findViewById(R.id.button_scan);
+        textViewFondazione = findViewById(R.id.text_view_fondazione);
     }
 
     public void initController() {
@@ -32,5 +35,9 @@ public class HomePageActivity extends AppCompatActivity {
 
     public Button getButtonScan() {
         return buttonScan;
+    }
+
+    public TextView getTextViewFondazione() {
+        return textViewFondazione;
     }
 }
