@@ -28,7 +28,7 @@ public class WelcomePageActivity extends AppCompatActivity {
     private void initController() {
         WelcomePageActivityController controller = new WelcomePageActivityController(this);
         controller.setListeners();
-        controller.bootProperActivity();
+        //controller.bootProperActivity();
     }
 
     public Button getButtonIniziamo() {
