@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TirocinioLite">
-        <activity android:name=".views.MainActivity">
+        <activity
+            android:name=".views.MainActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +23,7 @@
         <activity
             android:name=".views.WelcomePageActivity"
             android:noHistory="true"
-            android:screenOrientation="portrait"> <!-- Disabilita la possibilità di tornare indietro verso questa activity -->
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".views.HomePageActivity"
             android:screenOrientation="portrait" />
