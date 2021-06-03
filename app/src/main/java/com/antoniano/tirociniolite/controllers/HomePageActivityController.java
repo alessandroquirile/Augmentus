@@ -3,7 +3,6 @@ package com.antoniano.tirociniolite.controllers;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.antoniano.tirociniolite.factories.ARScannerFactory;
 import com.antoniano.tirociniolite.interfaces.ARScanner;
@@ -22,7 +21,23 @@ public class HomePageActivityController {
 
     public void setListeners() {
         setListenerOnButtonScan(homePageActivity.getButtonScan());
-        setListenerOnTextViewFondazione(homePageActivity.getTextViewFondazione());
+        setListenerOnButtonSitoWeb(homePageActivity.getButtonSitoWeb());
+        setListenerOnButtonMappa(homePageActivity.getButtonMappa());
+    }
+
+    private void setListenerOnButtonMappa(Button buttonMappa) {
+        buttonMappa.setOnClickListener(view -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:40.822860,14.356440?q=40.822860,14.356440(Label+Name)"));
+            homePageActivity.startActivity(intent);
+        });
+    }
+
+    private void setListenerOnButtonSitoWeb(Button buttonSitoWeb) {
+        buttonSitoWeb.setOnClickListener(view -> {
+            String url = "https://www.istitutoantoniano.it";
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            homePageActivity.startActivity(browserIntent);
+        });
     }
 
     private void setListenerOnButtonScan(Button buttonScan) {
@@ -31,13 +46,6 @@ public class HomePageActivityController {
             String technology = ConfigFileReader.getProperty("ar_scanner_technology", view.getContext());
             arScanner = arScannerFactory.getARScanner(technology);
             arScanner.scan(view.getContext());
-        });
-    }
-
-    private void setListenerOnTextViewFondazione(TextView textViewFondazione) {
-        textViewFondazione.setOnClickListener(view -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:40.822860,14.356440?q=40.822860,14.356440(Label+Name)"));
-            homePageActivity.startActivity(intent);
         });
     }
 }

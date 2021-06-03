@@ -30,20 +30,48 @@
         android:id="@+id/text_view_fondazione"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
         android:text="@string/fondazione_istituto_antoniano"
         android:textColor="@color/venice_blue"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/button_scan"
-        android:layout_width="340sp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45sp"
-        android:backgroundTint="@color/venice_blue"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/open_scanner" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_scan"
+                android:layout_width="340sp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/venice_blue"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/scanner" />
+
+            <Button
+                android:id="@+id/button_sito_web"
+                android:layout_width="340sp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/venice_blue"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/sito_web" />
+
+            <Button
+                android:id="@+id/button_mappa"
+                android:layout_width="340sp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/venice_blue"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/mappa" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Tirocinio Lite</string>
     <string name="fondazione_istituto_antoniano">Fondazione Istituto Antoniano</string>
-    <string name="open_scanner">Apri scanner</string>
     <string name="homepage_image">Homepage image</string>
     <string name="ciao_bentornato">Ciao, bentornato!</string>
     <string name="welcome_title">Benvenuto nella tua app di realtà aumentata!</string>
     <string name="welcome_description">Scannerizza le carte e tuffati in un magico mondo virtuale</string>
     <string name="iniziamo">Iniziamo</string>
+    <string name="sito_web">Sito web</string>
+    <string name="mappa">Mappa</string>
+    <string name="scanner">Scanner</string>
 </resources>
