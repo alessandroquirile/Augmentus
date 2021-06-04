@@ -24,7 +24,7 @@ public class HomePageActivity extends AppCompatActivity {
 
         initViewComponents();
         initController();
-        controller.playAudio(R.raw.tutorial);
+        controller.play(R.raw.tutorial);
     }
 
     public void initViewComponents() {

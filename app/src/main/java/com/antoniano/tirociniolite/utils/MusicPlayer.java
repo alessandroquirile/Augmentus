@@ -7,6 +7,12 @@ public class MusicPlayer extends MediaPlayer {
 
     private static MediaPlayer player;
 
+    @Override
+    public void pause() {
+        if (player != null)
+            player.pause();
+    }
+
     public static void play(Context context, int resId) {
         if (player == null) {
             player = MediaPlayer.create(context, resId);
@@ -20,10 +26,5 @@ public class MusicPlayer extends MediaPlayer {
             player.release();
             player = null;
         }
-    }
-
-    public void pause() {
-        if (player != null)
-            player.pause();
     }
 }

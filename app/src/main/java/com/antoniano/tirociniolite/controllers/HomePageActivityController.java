@@ -61,7 +61,7 @@ public class HomePageActivityController {
         lottieAnimationView.setOnClickListener(view -> MusicPlayer.play(homePageActivity.getApplicationContext(), R.raw.tutorial));
     }
 
-    public void playAudio(int resId) {
+    public void play(int resId) {
         MusicPlayer.play(homePageActivity.getApplicationContext(), resId);
     }
 }
