@@ -5,6 +5,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.antoniano.tirociniolite.R;
 import com.antoniano.tirociniolite.controllers.HomePageActivityController;
 
@@ -13,6 +14,8 @@ public class HomePageActivity extends AppCompatActivity {
     private Button buttonScan;
     private Button buttonSitoWeb;
     private Button buttonMappa;
+    private LottieAnimationView lottieAnimationView;
+    private HomePageActivityController controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +24,19 @@ public class HomePageActivity extends AppCompatActivity {
 
         initViewComponents();
         initController();
+        controller.playAudio(R.raw.tutorial);
     }
 
     public void initViewComponents() {
         buttonScan = findViewById(R.id.button_scan);
         buttonSitoWeb = findViewById(R.id.button_sito_web);
         buttonMappa = findViewById(R.id.button_mappa);
+        lottieAnimationView = findViewById(R.id.lottie_animation_view);
     }
 
     public void initController() {
-        HomePageActivityController homePageActivityController = new HomePageActivityController(this);
-        homePageActivityController.setListeners();
+        controller = new HomePageActivityController(this);
+        controller.setListeners();
     }
 
     public Button getButtonScan() {
@@ -44,5 +49,9 @@ public class HomePageActivity extends AppCompatActivity {
 
     public Button getButtonMappa() {
         return buttonMappa;
+    }
+
+    public LottieAnimationView getLottieAnimationView() {
+        return lottieAnimationView;
     }
 }

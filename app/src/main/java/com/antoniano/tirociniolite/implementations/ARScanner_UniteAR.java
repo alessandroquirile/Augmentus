@@ -5,20 +5,21 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.widget.Toast;
 
 import com.antoniano.tirociniolite.interfaces.ARScanner;
 
 public class ARScanner_UniteAR implements ARScanner {
 
     @Override
-    public void scan(Context context) {
+    public boolean scan(Context context) {
         String address = "https://web.unitear.com";
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
-        if (isConnected(context))
+        if (isConnected(context)) {
             context.startActivity(browserIntent);
-        else
-            Toast.makeText(context, "Connettiti a internet", Toast.LENGTH_LONG).show();
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private boolean isConnected(Context context) {

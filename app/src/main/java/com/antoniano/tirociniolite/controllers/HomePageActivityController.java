@@ -3,10 +3,14 @@ package com.antoniano.tirociniolite.controllers;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.antoniano.tirociniolite.R;
 import com.antoniano.tirociniolite.factories.ARScannerFactory;
 import com.antoniano.tirociniolite.interfaces.ARScanner;
 import com.antoniano.tirociniolite.utils.ConfigFileReader;
+import com.antoniano.tirociniolite.utils.MusicPlayer;
 import com.antoniano.tirociniolite.views.HomePageActivity;
 
 public class HomePageActivityController {
@@ -23,6 +27,7 @@ public class HomePageActivityController {
         setListenerOnButtonScan(homePageActivity.getButtonScan());
         setListenerOnButtonSitoWeb(homePageActivity.getButtonSitoWeb());
         setListenerOnButtonMappa(homePageActivity.getButtonMappa());
+        setListenerOnLottieAnimation(homePageActivity.getLottieAnimationView());
     }
 
     private void setListenerOnButtonMappa(Button buttonMappa) {
@@ -45,7 +50,18 @@ public class HomePageActivityController {
             arScannerFactory = ARScannerFactory.getInstance();
             String technology = ConfigFileReader.getProperty("ar_scanner_technology", view.getContext());
             arScanner = arScannerFactory.getARScanner(technology);
-            arScanner.scan(view.getContext());
+            if (!arScanner.scan(view.getContext())) {
+                Toast.makeText(homePageActivity.getApplicationContext(), "Connettiti a internet", Toast.LENGTH_LONG).show();
+                MusicPlayer.play(homePageActivity.getApplicationContext(), R.raw.not_connected);
+            }
         });
+    }
+
+    private void setListenerOnLottieAnimation(LottieAnimationView lottieAnimationView) {
+        lottieAnimationView.setOnClickListener(view -> MusicPlayer.play(homePageActivity.getApplicationContext(), R.raw.tutorial));
+    }
+
+    public void playAudio(int resId) {
+        MusicPlayer.play(homePageActivity.getApplicationContext(), resId);
     }
 }

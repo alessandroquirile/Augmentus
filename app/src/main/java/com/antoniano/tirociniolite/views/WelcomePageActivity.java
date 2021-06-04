@@ -10,6 +10,7 @@ import com.antoniano.tirociniolite.controllers.WelcomePageActivityController;
 
 public class WelcomePageActivity extends AppCompatActivity {
 
+    private WelcomePageActivityController controller;
     private Button buttonIniziamo;
 
     @Override
@@ -19,6 +20,13 @@ public class WelcomePageActivity extends AppCompatActivity {
 
         initViewComponents();
         initController();
+        controller.play(R.raw.welcome);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        controller.stop();
     }
 
     private void initViewComponents() {
@@ -26,9 +34,8 @@ public class WelcomePageActivity extends AppCompatActivity {
     }
 
     private void initController() {
-        WelcomePageActivityController controller = new WelcomePageActivityController(this);
+        controller = new WelcomePageActivityController(this);
         controller.setListeners();
-        //controller.bootProperActivity();
     }
 
     public Button getButtonIniziamo() {
