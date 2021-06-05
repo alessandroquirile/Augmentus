@@ -32,7 +32,8 @@ public class HomePageActivityController {
 
     private void setListenerOnButtonMappa(Button buttonMappa) {
         buttonMappa.setOnClickListener(view -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:40.822860,14.356440?q=40.822860,14.356440(Label+Name)"));
+            String location = Uri.encode("Fondazione Istituto Antoniano");
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=" + location));
             homePageActivity.startActivity(intent);
         });
     }
