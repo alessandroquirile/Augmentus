@@ -65,4 +65,8 @@ public class HomePageActivityController {
     public void play(int resId) {
         MusicPlayer.play(homePageActivity.getApplicationContext(), resId);
     }
+
+    public void stop() {
+        MusicPlayer.stopPlayer();
+    }
 }

@@ -27,6 +27,12 @@ public class HomePageActivity extends AppCompatActivity {
         controller.play(R.raw.tutorial);
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        controller.stop();
+    }
+
     public void initViewComponents() {
         buttonScan = findViewById(R.id.button_scan);
         buttonSitoWeb = findViewById(R.id.button_sito_web);
