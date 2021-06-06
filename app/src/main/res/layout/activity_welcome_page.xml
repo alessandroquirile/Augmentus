@@ -30,7 +30,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
         android:text="@string/welcome_description"
@@ -41,7 +40,7 @@
         android:id="@+id/button_iniziamo"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/venice_blue"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/iniziamo" />
