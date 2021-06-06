@@ -39,9 +39,9 @@
 
     <Button
         android:id="@+id/button_iniziamo"
-        android:layout_width="340sp"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45sp"
+        android:layout_marginTop="45dp"
         android:backgroundTint="@color/venice_blue"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/iniziamo" />

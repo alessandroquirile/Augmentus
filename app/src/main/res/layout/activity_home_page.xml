@@ -49,7 +49,7 @@
 
             <Button
                 android:id="@+id/button_scan"
-                android:layout_width="340sp"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/venice_blue"
                 android:fontFamily="@font/poppins_medium"
@@ -57,7 +57,7 @@
 
             <Button
                 android:id="@+id/button_sito_web"
-                android:layout_width="340sp"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/venice_blue"
                 android:fontFamily="@font/poppins_medium"
@@ -65,7 +65,7 @@
 
             <Button
                 android:id="@+id/button_mappa"
-                android:layout_width="340sp"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/venice_blue"
                 android:fontFamily="@font/poppins_medium"
