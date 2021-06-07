@@ -9,16 +9,18 @@ import com.antoniano.tirociniolite.controllers.MainActivityController;
 
 public class MainActivity extends AppCompatActivity {
 
+    private MainActivityController controller;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initController();
+        controller.bootProperActivity();
     }
 
     private void initController() {
-        MainActivityController controller = new MainActivityController(this);
-        controller.bootProperActivity();
+        controller = new MainActivityController(this);
     }
 }
