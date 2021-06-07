@@ -2,6 +2,8 @@ package com.antoniano.tirociniolite.interfaces;
 
 import android.content.Context;
 
+import com.antoniano.tirociniolite.exceptions.NoInternetConnectionException;
+
 public interface ARScanner {
-    boolean scan(Context context);
+    void scan(Context context) throws NoInternetConnectionException;
 }

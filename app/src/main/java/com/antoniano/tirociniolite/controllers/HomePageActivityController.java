@@ -3,10 +3,10 @@ package com.antoniano.tirociniolite.controllers;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.antoniano.tirociniolite.R;
+import com.antoniano.tirociniolite.exceptions.NoInternetConnectionException;
 import com.antoniano.tirociniolite.factories.ARScannerFactory;
 import com.antoniano.tirociniolite.interfaces.ARScanner;
 import com.antoniano.tirociniolite.utils.ConfigFileReader;
@@ -51,8 +51,10 @@ public class HomePageActivityController {
             arScannerFactory = ARScannerFactory.getInstance();
             String technology = ConfigFileReader.getProperty("ar_scanner_technology", view.getContext());
             arScanner = arScannerFactory.getARScanner(technology);
-            if (!arScanner.scan(view.getContext())) {
-                Toast.makeText(homePageActivity.getApplicationContext(), "Connettiti a internet", Toast.LENGTH_LONG).show();
+            try {
+                arScanner.scan(view.getContext());
+            } catch (NoInternetConnectionException e) {
+                //Toast.makeText(homePageActivity.getApplicationContext(), "Connettiti a internet", Toast.LENGTH_LONG).show();
                 MusicPlayer.play(homePageActivity.getApplicationContext(), R.raw.not_connected);
             }
         });
