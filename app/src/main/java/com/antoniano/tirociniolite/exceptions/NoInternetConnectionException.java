@@ -1,5 +1,5 @@
 package com.antoniano.tirociniolite.exceptions;
 
-public class NoInternetConnectionException extends Throwable {
+public class NoInternetConnectionException extends Exception {
 
 }

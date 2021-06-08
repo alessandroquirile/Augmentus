@@ -54,7 +54,6 @@ public class HomePageActivityController {
             try {
                 arScanner.scan(view.getContext());
             } catch (NoInternetConnectionException e) {
-                //Toast.makeText(homePageActivity.getApplicationContext(), "Connettiti a internet", Toast.LENGTH_LONG).show();
                 MusicPlayer.play(homePageActivity.getApplicationContext(), R.raw.not_connected);
             }
         });
