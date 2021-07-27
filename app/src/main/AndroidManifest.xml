@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TirocinioLite">
         <activity
-            android:name=".views.MainActivity"
+            android:name=".views.BootActivity"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

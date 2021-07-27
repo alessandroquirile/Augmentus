@@ -5,11 +5,11 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.antoniano.tirociniolite.R;
-import com.antoniano.tirociniolite.controllers.MainActivityController;
+import com.antoniano.tirociniolite.controllers.BootActivityController;
 
-public class MainActivity extends AppCompatActivity {
+public class BootActivity extends AppCompatActivity {
 
-    private MainActivityController controller;
+    private BootActivityController controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initController() {
-        controller = new MainActivityController(this);
+        controller = new BootActivityController(this);
     }
 }
